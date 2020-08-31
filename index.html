@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test Phone Number</title>
+</head>
+<body>
+    <div class="div-1"> 
+        <div class="div-2">
+            <h3> KIỂM TRA ĐỊNH DẠNG SỐ ĐIỆN THOẠI </h3>
+            <input id = "input" placeholder = "Nhập số điện thoại: ">
+            <button onclick="check()"> Kiểm tra </button>
+        </div>
+    </div> 
+
+    <Script>
+        function check () {
+            var phoneNumber = document.getElementById("input").value;
+            var regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+            if ( phoneNumber !== '') {
+                if (regex.test(phoneNumber) == false) {
+                    alert ('Số điện thoại này không đúng định dạng ...');
+                } else {
+                    alert ('Số điện thoại này hợp lệ !');
+                }
+            } else {
+                alert ('Hãy vui lòng nhập số điện thoại ...');
+            }
+        }
+    </Script>
+</body>
+</html>
